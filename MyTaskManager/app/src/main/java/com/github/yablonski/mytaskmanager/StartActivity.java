@@ -36,7 +36,9 @@ public class StartActivity extends ActionBarActivity{
     }
 
     private void startMainActivity() {
-        startActivity(new Intent(this, MainActivity.class));
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("extra_key", "asdd");
+        startActivity(intent);
         finish();
     }
 }
